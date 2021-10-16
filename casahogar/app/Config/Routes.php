@@ -33,6 +33,13 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// Cada funcion de un controlador puede tener su propia ruta
+// Rutas de productos
+$routes->get('/Producto', 'ProductoController::productoView');
+$routes->post('/registrarProducto', 'ProductoController::registrarProducto');
+// Rutas de formulario animales
+$routes->get('/Animales', 'AnimalesController::registrarAnimalView');
+$routes->post('/registrarMascota', 'AnimalesController::registrar');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
